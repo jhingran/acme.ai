@@ -69,6 +69,11 @@ body {
     color: var(--primary-color);
 }
 
+/* Navigation */
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -175,6 +180,23 @@ body {
     }
 }
 
+/* Mission Statement */
+.mission-statement {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.large-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero h1 {
@@ -187,5 +209,102 @@ body {
     
     .features-container {
         grid-template-columns: 1fr;
+    }
+}
+
+/* News Page Styles */
+.news-content {
+    padding: 120px 20px 60px;
+    background: var(--background-dark);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.press-release {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.embargo-notice {
+    color: #ff4444;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.press-release h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    color: var(--primary-color);
+}
+
+.press-release h2 {
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    color: var(--text-light);
+}
+
+.press-release p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: var(--text-gray);
+}
+
+.press-release .location {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.press-release a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.press-release a:hover {
+    opacity: 0.8;
+}
+
+.contact-info {
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+}
+
+.contact-info h3 {
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.closing {
+    font-style: italic;
+    color: var(--text-gray);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .press-release {
+        padding: 20px;
+    }
+
+    .press-release h1 {
+        font-size: 2rem;
+    }
+
+    .press-release h2 {
+        font-size: 1.5rem;
     }
 } 
