@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AImhigh - Next-Gen Drone Intelligence</title>
+    <meta name="description" content="AImhigh delivers cutting-edge AI-driven drone solutions for the future of autonomous flight.">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo-container">
+                <img src="Image from iOS.jpg" alt="AImhigh Logo" class="header-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" style="width: 100px;">
+                    <!-- Logo SVG content -->
+                    <defs>
+                        <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0b0b3b" />
+                            <stop offset="100%" stop-color="#320a5c" />
+                        </linearGradient>
+                        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="2.5" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                    </defs>
+                    <g transform="translate(250, 150) scale(0.4)">
+                        <text x="0" y="0" font-family="Arial, sans-serif" font-size="60" font-weight="bold" text-anchor="middle" fill="#ffffff">
+                            <tspan>A</tspan><tspan fill="#00ffff">I</tspan><tspan>m</tspan><tspan fill="#00ffff">high</tspan>
+                        </text>
+                    </g>
+                </svg>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="Image from iOS.jpg" alt="AImhigh Logo" class="hero-logo">
+            <h1 class="fade-in">Smarter Skies Start Here</h1>
+            <p class="fade-in">Revolutionizing autonomous flight with cutting-edge AI technology. Experience unparalleled precision, adaptability, and intelligence in drone operations.</p>
+            <a href="#contact" class="cta-button fade-in">Get Started</a>
+        </div>
+        <!-- Full Logo as Background -->
+        <div class="background-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" style="opacity: 0.1; position: absolute; right: -10%; top: 50%; transform: translateY(-50%) scale(2);">
+                <!-- Include the full logo SVG here -->
+                <!-- Main Brain/Circuit AI Icon -->
+                <g transform="translate(180, 100) scale(0.9)" filter="url(#glow)">
+                    <path d="M0,0 L-40,-20 L-30,-40 L-10,-30 L10,-50 L40,-30 L30,-10 L50,20 L30,40 L10,30 L-10,50 L-40,30 Z" 
+                        fill="none" stroke="#00ffff" stroke-width="2" opacity="0.9" />
+                    <circle cx="0" cy="0" r="25" fill="none" stroke="#00ffff" stroke-width="2" />
+                    <circle cx="0" cy="0" r="15" fill="none" stroke="#ffffff" stroke-width="1.5" />
+                </g>
+                
+                <!-- Advanced Drone Representation -->
+                <g transform="translate(320, 100) scale(0.75)">
+                    <path d="M0,0 L-20,-10 L-40,-5 L-50,5 L-40,15 L-20,10 L0,20 L20,10 L40,15 L50,5 L40,-5 L20,-10 Z" 
+                        fill="#101040" stroke="#ffffff" stroke-width="2" />
+                    <circle cx="0" cy="0" r="15" fill="#101040" stroke="#ffffff" stroke-width="1.5" />
+                </g>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="features-container">
+            <div class="feature-card fade-in">
+                <i class="fas fa-brain feature-icon"></i>
+                <h3>Advanced AI Processing</h3>
+                <p>Real-time decision making and adaptive flight patterns powered by cutting-edge artificial intelligence.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <i class="fas fa-robot feature-icon"></i>
+                <h3>Autonomous Navigation</h3>
+                <p>Sophisticated obstacle avoidance and path planning for safe and efficient drone operations.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <i class="fas fa-camera feature-icon"></i>
+                <h3>Intelligent Imaging</h3>
+                <p>Advanced computer vision for real-time object detection, tracking, and scene understanding.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="features" style="background: var(--background-darker);">
+        <div class="features-container">
+            <div class="feature-card fade-in">
+                <i class="fas fa-industry feature-icon"></i>
+                <h3>Industrial Inspection</h3>
+                <p>Automated infrastructure inspection with AI-powered defect detection and analysis.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <i class="fas fa-map-marked-alt feature-icon"></i>
+                <h3>Aerial Mapping</h3>
+                <p>High-precision 3D mapping and terrain analysis for various applications.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <i class="fas fa-shield-alt feature-icon"></i>
+                <h3>Security & Surveillance</h3>
+                <p>Intelligent monitoring systems with automated threat detection and response.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="features">
+        <div class="features-container" style="max-width: 800px;">
+            <div class="feature-card fade-in" style="text-align: center;">
+                <h2>Ready to Elevate Your Operations?</h2>
+                <p style="margin: 2rem 0;">Contact us to learn how AImhigh can transform your drone operations with next-generation AI technology.</p>
+                <a href="mailto:contact@aimhigh.ai" class="cta-button">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--background-darker); padding: 2rem 0; text-align: center;">
+        <p>&copy; 2024 AImhigh. All rights reserved.</p>
+    </footer>
+
+    <!-- Simple Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html> 
