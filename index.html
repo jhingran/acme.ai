@@ -3,157 +3,435 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AImhigh - Next-Gen Drone Intelligence</title>
-    <meta name="description" content="AImhigh delivers cutting-edge AI-driven drone solutions for the future of autonomous flight.">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>AImhigh - Innovating the Future of Flight</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #334155;  /* Slightly lighter than navy for better readability */
+        }
+
+        header {
+            background-color: #0A192F;  /* Navy blue */
+            color: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(10, 25, 47, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #20E3B2;  /* Bright teal */
+            text-decoration: none;
+            transition: all 0.3s;
+            letter-spacing: -0.5px;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #20E3B2;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)),
+                        url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1506947411487-a56738267384?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+            background-size: contain;
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            color: #FFFFFF;
+            font-size: 3.8rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #20E3B2;  /* Teal */
+            color: #0A192F;  /* Navy blue */
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid #20E3B2;  /* Teal */
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: #20E3B2;  /* Teal */
+        }
+
+        .cta-section {
+            background-color: #0A192F;  /* Navy blue */
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: #FFFFFF;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            color: #20E3B2;  /* Teal */
+            border: 2px solid #20E3B2;  /* Teal */
+        }
+
+        .cta-button.secondary:hover {
+            background-color: #20E3B2;  /* Teal */
+            color: #0A192F;  /* Navy blue */
+        }
+
+        .about {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        .about h2 {
+            color: #0A192F;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            color: #334155;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .about-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        .contact-info {
+            background-color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: #0A192F;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item i {
+            color: #20E3B2;  /* Teal */
+            font-size: 1.2rem;
+        }
+
+        .contact-item a {
+            color: #334155;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #20E3B2;
+        }
+
+        .services {
+            padding: 5rem 2rem;
+            background-color: #f8f9fa;
+        }
+
+        .services h2 {
+            color: #0A192F;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(10, 25, 47, 0.1);
+            border: 1px solid rgba(32, 227, 178, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(10, 25, 47, 0.15);
+            border-color: #20E3B2;
+        }
+
+        .service-card h3 {
+            color: #0A192F;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #334155;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            text-align: left;
+            margin: 1.5rem 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .service-features li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #334155;
+        }
+
+        .service-features li::before {
+            content: "✓";
+            color: #20E3B2;
+            position: absolute;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo-container">
-                <img src="Image from iOS.jpg" alt="AImhigh Logo" class="header-logo">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" style="width: 100px;">
-                    <!-- Logo SVG content -->
-                    <defs>
-                        <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#0b0b3b" />
-                            <stop offset="100%" stop-color="#320a5c" />
-                        </linearGradient>
-                        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                            <feGaussianBlur stdDeviation="2.5" result="blur" />
-                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                        </filter>
-                    </defs>
-                    <g transform="translate(250, 150) scale(0.4)">
-                        <text x="0" y="0" font-family="Arial, sans-serif" font-size="60" font-weight="bold" text-anchor="middle" fill="#ffffff">
-                            <tspan>A</tspan><tspan fill="#00ffff">I</tspan><tspan>m</tspan><tspan fill="#00ffff">high</tspan>
-                        </text>
-                    </g>
-                </svg>
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <img src="Image from iOS.jpg" alt="AImhigh Logo" style="height: 30px; width: auto; margin-right: 10px; vertical-align: middle; opacity: 0.9;">
+                AImhigh
+            </a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="news.html">News</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#solutions">Solutions</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-content">
-            <img src="Image from iOS.jpg" alt="AImhigh Logo" class="hero-logo">
-            <h1 class="fade-in">Smarter Skies Start Here</h1>
-            <p class="fade-in">Revolutionizing autonomous flight with cutting-edge AI technology. Experience unparalleled precision, adaptability, and intelligence in drone operations.</p>
-            <a href="#contact" class="cta-button fade-in">Get Started</a>
-        </div>
-        <!-- Full Logo as Background -->
-        <div class="background-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" style="opacity: 0.1; position: absolute; right: -10%; top: 50%; transform: translateY(-50%) scale(2);">
-                <!-- Include the full logo SVG here -->
-                <!-- Main Brain/Circuit AI Icon -->
-                <g transform="translate(180, 100) scale(0.9)" filter="url(#glow)">
-                    <path d="M0,0 L-40,-20 L-30,-40 L-10,-30 L10,-50 L40,-30 L30,-10 L50,20 L30,40 L10,30 L-10,50 L-40,30 Z" 
-                        fill="none" stroke="#00ffff" stroke-width="2" opacity="0.9" />
-                    <circle cx="0" cy="0" r="25" fill="none" stroke="#00ffff" stroke-width="2" />
-                    <circle cx="0" cy="0" r="15" fill="none" stroke="#ffffff" stroke-width="1.5" />
-                </g>
-                
-                <!-- Advanced Drone Representation -->
-                <g transform="translate(320, 100) scale(0.75)">
-                    <path d="M0,0 L-20,-10 L-40,-5 L-50,5 L-40,15 L-20,10 L0,20 L20,10 L40,15 L50,5 L40,-5 L20,-10 Z" 
-                        fill="#101040" stroke="#ffffff" stroke-width="2" />
-                    <circle cx="0" cy="0" r="15" fill="#101040" stroke="#ffffff" stroke-width="1.5" />
-                </g>
-            </svg>
+            <h1>Revolutionizing Last-Mile Logistics</h1>
+            <p>Delivering goods swiftly, safely, and sustainably through silent night flights</p>
+            <a href="#contact" class="cta-button">Get Started</a>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="features-container">
-            <div class="feature-card fade-in">
-                <i class="fas fa-brain feature-icon"></i>
-                <h3>Advanced AI Processing</h3>
-                <p>Real-time decision making and adaptive flight patterns powered by cutting-edge artificial intelligence.</p>
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>At AImhigh, we're transforming the delivery landscape with our autonomous drone technology. Our mission is to revolutionize last-mile logistics by delivering goods swiftly, safely, and sustainably—using autonomous drones that operate silently and efficiently through the night, bringing convenience to doorsteps while the world sleeps.</p>
+                <br>
+                <p>Our advanced fleet of silent, AI-powered drones operates during off-peak hours, reducing traffic congestion and environmental impact while ensuring timely deliveries. With cutting-edge navigation systems and robust safety protocols, we're making nighttime delivery a reality, bringing unparalleled convenience to communities while minimizing disruption to daily life.</p>
             </div>
-            <div class="feature-card fade-in">
-                <i class="fas fa-robot feature-icon"></i>
-                <h3>Autonomous Navigation</h3>
-                <p>Sophisticated obstacle avoidance and path planning for safe and efficient drone operations.</p>
-            </div>
-            <div class="feature-card fade-in">
-                <i class="fas fa-camera feature-icon"></i>
-                <h3>Intelligent Imaging</h3>
-                <p>Advanced computer vision for real-time object detection, tracking, and scene understanding.</p>
-            </div>
+            <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="AImhigh's advanced delivery drone" class="about-image">
         </div>
     </section>
 
-    <!-- Solutions Section -->
-    <section id="solutions" class="features" style="background: var(--background-darker);">
-        <div class="features-container">
-            <div class="feature-card fade-in">
-                <i class="fas fa-industry feature-icon"></i>
-                <h3>Industrial Inspection</h3>
-                <p>Automated infrastructure inspection with AI-powered defect detection and analysis.</p>
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3>AImhigh Care Entry Level</h3>
+                <p>Start your autonomous delivery journey with our essential service package.</p>
+                <ul class="service-features">
+                    <li>Basic night delivery coverage</li>
+                    <li>Standard delivery tracking</li>
+                    <li>Regular maintenance checks</li>
+                    <li>Basic customer support</li>
+                    <li>Standard delivery windows</li>
+                </ul>
+                <a href="#contact" class="cta-button">Get Started</a>
             </div>
-            <div class="feature-card fade-in">
-                <i class="fas fa-map-marked-alt feature-icon"></i>
-                <h3>Aerial Mapping</h3>
-                <p>High-precision 3D mapping and terrain analysis for various applications.</p>
-            </div>
-            <div class="feature-card fade-in">
-                <i class="fas fa-shield-alt feature-icon"></i>
-                <h3>Security & Surveillance</h3>
-                <p>Intelligent monitoring systems with automated threat detection and response.</p>
+
+            <div class="service-card">
+                <h3>AImhigh Care Plus</h3>
+                <p>Enhanced delivery solutions with premium features and priority service.</p>
+                <ul class="service-features">
+                    <li>24/7 delivery coverage</li>
+                    <li>Advanced real-time tracking</li>
+                    <li>Priority maintenance</li>
+                    <li>Premium customer support</li>
+                    <li>Flexible delivery windows</li>
+                    <li>Custom delivery options</li>
+                </ul>
+                <a href="#contact" class="cta-button">Upgrade Now</a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="features">
-        <div class="features-container" style="max-width: 800px;">
-            <div class="feature-card fade-in" style="text-align: center;">
-                <h2>Ready to Elevate Your Operations?</h2>
-                <p style="margin: 2rem 0;">Contact us to learn how AImhigh can transform your drone operations with next-generation AI technology.</p>
-                <a href="mailto:contact@aimhigh.ai" class="cta-button">Contact Us</a>
-            </div>
+    <section class="cta-section" id="contact">
+        <h2>Ready for Silent Night Delivery?</h2>
+        <p>Join us in transforming last-mile logistics. Experience the future of delivery with our autonomous drone network.</p>
+        <div class="cta-buttons">
+            <a href="#contact" class="cta-button">Schedule a Demo</a>
+            <a href="#contact" class="cta-button secondary">Contact Sales</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer style="background: var(--background-darker); padding: 2rem 0; text-align: center;">
-        <p>&copy; 2024 AImhigh. All rights reserved.</p>
-    </footer>
-
-    <!-- Simple Animation Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const observerOptions = {
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.fade-in').forEach(element => {
-                observer.observe(element);
-            });
-        });
-    </script>
+    <section class="contact-info">
+        <h3>Contact Us</h3>
+        <div class="contact-details">
+            <div class="contact-item">
+                <i>📞</i>
+                <a href="tel:+11234567890">+1 (123) 456-7890</a>
+            </div>
+            <div class="contact-item">
+                <i>📧</i>
+                <a href="mailto:info@aimhigh.com">info@aimhigh.com</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html> 

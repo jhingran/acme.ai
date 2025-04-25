@@ -4,87 +4,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News - AImhigh</title>
-    <meta name="description" content="Latest news and updates from AImhigh - Leading the future of drone intelligence.">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #0A192F;
+            color: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(10, 25, 47, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #20E3B2;
+            text-decoration: none;
+            transition: all 0.3s;
+            letter-spacing: -0.5px;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #20E3B2;
+        }
+
+        .news-content {
+            max-width: 900px;
+            margin: 100px auto 50px;
+            padding: 2rem;
+        }
+
+        .press-release {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(10, 25, 47, 0.1);
+            border: 1px solid rgba(32, 227, 178, 0.1);
+        }
+
+        .embargo-notice {
+            color: #ef4444;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(239, 68, 68, 0.1);
+            border-radius: 5px;
+        }
+
+        .press-release h1 {
+            color: #0A192F;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .press-release h2 {
+            color: #0A192F;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            font-weight: 700;
+        }
+
+        .press-release p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #334155;
+        }
+
+        .location {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #0A192F;
+        }
+
+        .contact-info {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid rgba(32, 227, 178, 0.2);
+        }
+
+        .contact-info h3 {
+            color: #0A192F;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .contact-info p {
+            color: #334155;
+        }
+
+        .press-release a {
+            color: #20E3B2;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .press-release a:hover {
+            opacity: 0.8;
+        }
+
+        .closing {
+            font-style: italic;
+            color: #334155;
+            border-top: 1px solid rgba(10, 25, 47, 0.1);
+            padding-top: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .press-release {
+                padding: 1.5rem;
+            }
+
+            .press-release h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav>
-            <div class="logo">
-                <img src="Image from iOS.jpg" alt="AImhigh Logo" class="header-logo">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#0b0b3b" />
-                            <stop offset="100%" stop-color="#320a5c" />
-                        </linearGradient>
-                        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                            <feGaussianBlur stdDeviation="2.5" result="blur" />
-                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                        </filter>
-                    </defs>
-                    <g transform="translate(20, 20) scale(0.4)">
-                        <text x="0" y="0" font-family="Arial, sans-serif" font-size="60" font-weight="bold" text-anchor="middle" fill="#ffffff">
-                            <tspan>A</tspan><tspan fill="#00ffff">I</tspan><tspan>m</tspan><tspan fill="#00ffff">high</tspan>
-                        </text>
-                    </g>
-                </svg>
-            </div>
+            <a href="index.html" class="logo">
+                <img src="Image from iOS.jpg" alt="AImhigh Logo" style="height: 30px; width: auto; margin-right: 10px; vertical-align: middle; opacity: 0.9;">
+                AImhigh
+            </a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="about.html">About</a>
+                <a href="index.html#about">About</a>
                 <a href="news.html" class="active">News</a>
-                <a href="#contact">Contact</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#contact">Contact</a>
             </div>
         </nav>
     </header>
 
-    <!-- News Content -->
-    <section class="news-content">
-        <div class="container">
-            <div class="press-release">
-                <div class="embargo-notice">Confidential Press Release<br>Embargo until April 26, 2025</div>
-                
-                <h1>AImhigh Soars to New Heights with Revolutionary Drone Intelligence Technology: "Smarter Skies Start Here"</h1>
-                
-                <p class="location"><strong>San Francisco, CA</strong> — AImhigh, a pioneering force in drone intelligence technology, is proud to announce its official launch, introducing a groundbreaking suite of aerial systems designed to revolutionize industries worldwide. With the tagline "Smarter Skies Start Here," AImhigh is set to empower businesses by transforming how they monitor, move, and innovate. Harnessing the power of AI and next-generation drone technology, the company delivers unmatched precision, efficiency, and insights — faster, safer, and smarter than ever before.</p>
+    <div class="news-content">
+        <div class="press-release">
+            <div class="embargo-notice">Confidential Press Release<br>Embargo until April 26, 2025</div>
+            
+            <h1>AImhigh Soars to New Heights with Revolutionary Drone Intelligence Technology: "Smarter Skies Start Here"</h1>
+            
+            <p class="location"><strong>San Francisco, CA</strong> — AImhigh, a pioneering force in drone intelligence technology, is proud to announce its official launch, introducing a groundbreaking suite of aerial systems designed to revolutionize industries worldwide. With the tagline "Smarter Skies Start Here," AImhigh is set to empower businesses by transforming how they monitor, move, and innovate. Harnessing the power of AI and next-generation drone technology, the company delivers unmatched precision, efficiency, and insights — faster, safer, and smarter than ever before.</p>
 
-                <h2>Cutting-Edge AI Capabilities</h2>
-                <p>AImhigh's innovative drones are equipped with state-of-the-art artificial intelligence, enabling them to process vast amounts of data in real-time. This advanced AI capability allows for autonomous navigation, precise mapping, and detailed analysis, offering users unparalleled accuracy and reliability. "Our technology is engineered to elevate operational efficiency and automate complex aerial tasks," says Alex Chen, CEO of AImhigh. "By integrating cutting-edge AI, we're not just making drones smarter — we're redefining the possibilities of what they can achieve."</p>
+            <h2>Cutting-Edge AI Capabilities</h2>
+            <p>AImhigh's innovative drones are equipped with state-of-the-art artificial intelligence, enabling them to process vast amounts of data in real-time. This advanced AI capability allows for autonomous navigation, precise mapping, and detailed analysis, offering users unparalleled accuracy and reliability. "Our technology is engineered to elevate operational efficiency and automate complex aerial tasks," says Alex Chen, CEO of AImhigh. "By integrating cutting-edge AI, we're not just making drones smarter — we're redefining the possibilities of what they can achieve."</p>
 
-                <h2>Target Users and Industry Applications</h2>
-                <p>The company's drone intelligence systems are designed to cater to a diverse array of industries, including agriculture, construction, logistics, and public safety. Farmers can leverage AImhigh drones for crop monitoring and precision agriculture, optimizing yields and reducing resource waste. In construction, the drones provide accurate site surveys and progress tracking, enhancing project management and safety. Logistics companies benefit from streamlined inventory management and delivery systems, while public safety agencies gain critical tools for emergency response and disaster management.</p>
+            <h2>Target Users and Industry Applications</h2>
+            <p>The company's drone intelligence systems are designed to cater to a diverse array of industries, including agriculture, construction, logistics, and public safety. Farmers can leverage AImhigh drones for crop monitoring and precision agriculture, optimizing yields and reducing resource waste. In construction, the drones provide accurate site surveys and progress tracking, enhancing project management and safety. Logistics companies benefit from streamlined inventory management and delivery systems, while public safety agencies gain critical tools for emergency response and disaster management.</p>
 
-                <h2>Availability and Pricing</h2>
-                <p>AImhigh's innovative drone systems are now available for purchase directly from their website, ensuring easy access for industries eager to embrace this transformative technology. The company offers a range of pricing options to suit various business needs, with bespoke solutions available for large-scale operations. Interested parties can visit <a href="http://www.aimhighdrones.com">www.aimhighdrones.com</a> for detailed product information and pricing inquiries.</p>
+            <h2>Availability and Pricing</h2>
+            <p>AImhigh's innovative drone systems are now available for purchase directly from their website, ensuring easy access for industries eager to embrace this transformative technology. The company offers a range of pricing options to suit various business needs, with bespoke solutions available for large-scale operations. Interested parties can visit <a href="http://www.aimhighdrones.com">www.aimhighdrones.com</a> for detailed product information and pricing inquiries.</p>
 
-                <h2>About AImhigh</h2>
-                <p>AImhigh is committed to empowering industries with intelligent aerial systems that transform how the world moves, monitors, and innovates. By harnessing the power of AI and next-generation drone technology, AImhigh delivers precision, efficiency, and insights — faster, safer, and smarter than ever before. For more information, visit <a href="http://www.aimhighdrones.com">www.aimhighdrones.com</a>.</p>
+            <h2>About AImhigh</h2>
+            <p>AImhigh is committed to empowering industries with intelligent aerial systems that transform how the world moves, monitors, and innovates. By harnessing the power of AI and next-generation drone technology, AImhigh delivers precision, efficiency, and insights — faster, safer, and smarter than ever before. For more information, visit <a href="http://www.aimhighdrones.com">www.aimhighdrones.com</a>.</p>
 
-                <div class="contact-info">
-                    <h3>For media inquiries, please contact:</h3>
-                    <p>
-                        Jessica Taylor<br>
-                        Public Relations Manager<br>
-                        AImhigh Drones<br>
-                        Phone: (555) 123-4567<br>
-                        Email: media@aimhighdrones.com
-                    </p>
-                </div>
-
-                <p class="closing">With its dedication to innovation and excellence, AImhigh is poised to lead the charge in drone intelligence technology, offering smarter solutions that redefine aerial operations across the globe.</p>
+            <div class="contact-info">
+                <h3>For media inquiries, please contact:</h3>
+                <p>
+                    Jessica Taylor<br>
+                    Public Relations Manager<br>
+                    AImhigh Drones<br>
+                    Phone: (555) 123-4567<br>
+                    Email: media@aimhighdrones.com
+                </p>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer style="background: var(--background-darker); padding: 2rem 0; text-align: center;">
-        <p>&copy; 2024 AImhigh. All rights reserved.</p>
-    </footer>
+            <p class="closing">With its dedication to innovation and excellence, AImhigh is poised to lead the charge in drone intelligence technology, offering smarter solutions that redefine aerial operations across the globe.</p>
+        </div>
+    </div>
 </body>
 </html> 
